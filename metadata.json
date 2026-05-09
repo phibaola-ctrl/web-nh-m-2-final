@@ -1,0 +1,8 @@
+{
+  "name": "NHÓM 2",
+  "description": "Nền tảng du lịch Nhóm 2 - Khám phá thế giới qua những trải nghiệm gacha độc đáo.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
