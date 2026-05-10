@@ -291,5 +291,385 @@ export const TOURS: Tour[] = [
     features: ['Cung điện Gyeongbokgung', 'Tháp Namsan', 'Mặc Hanbok'],
     itinerary: [],
     feedback: []
+  },
+  {
+    id: '16',
+    name: 'Iceland - Vũ Điệu Ánh Sáng',
+    location: 'Reykjavik',
+    country: 'Iceland',
+    description: 'Chiêm ngưỡng hiện tượng cực quang kỳ ảo và tắm suối khoáng nóng Blue Lagoon giữa lòng băng tuyết.',
+    price: 85000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.9,
+    category: 'Nature',
+    coordinates: { lat: 64.1466, lng: -21.9426 },
+    images: [
+      'https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1521033332975-fc7700683075?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Săn cực quang', 'Tắm Blue Lagoon', 'Ngắm thác nước Seljalandsfoss'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '17',
+    name: 'Na Uy - Chinh Phục Vịnh Fjord',
+    location: 'Bergen',
+    country: 'Na Uy',
+    description: 'Hành trình khám phá những vịnh biển sâu và dài nhất thế giới, bao quanh bởi những vách đá dựng đứng.',
+    price: 78000000,
+    duration: '7 Ngày 6 Đêm',
+    rating: 4.8,
+    category: 'Adventure',
+    coordinates: { lat: 60.3913, lng: 5.3221 },
+    images: [
+      'https://images.unsplash.com/photo-1499363536502-87642509e31b?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1531366750370-531f9fb5f339?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Du thuyền trên vịnh', 'Đi tàu hỏa Flåm', 'Lèo núi Pulpit Rock'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '18',
+    name: 'Ai Cập - Bí Ẩn Kim Tự Tháp',
+    location: 'Cairo',
+    country: 'Ai Cập',
+    description: 'Khám phá nền văn minh cổ đại bên dòng sông Nile và những công trình vĩ đại của các Pharaoh.',
+    price: 42000000,
+    duration: '5 Ngày 4 Đêm',
+    rating: 4.7,
+    category: 'Cultural',
+    coordinates: { lat: 29.9792, lng: 31.1342 },
+    images: [
+      'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Cưỡi lạc đà tại Giza', 'Du thuyền sông Nile', 'Thăm bảo tàng Ai Cập'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '19',
+    name: 'Sydney - Biểu Tượng Châu Úc',
+    location: 'Sydney',
+    country: 'Australia',
+    description: 'Thưởng thức nhạc kịch tại Opera House và đón nắng tại bãi biển Bondi nổi tiếng.',
+    price: 38000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.6,
+    category: 'City',
+    coordinates: { lat: -33.8688, lng: 151.2093 },
+    images: [
+      'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1523428096881-5bd79d043006?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Check-in Opera House', 'Lướt sóng Bondi', 'Cầu cảng Sydney'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '20',
+    name: 'Tokyo - Nhịp Sống Tương Lai',
+    location: 'Tokyo',
+    country: 'Nhật Bản',
+    description: 'Hòa mình vào đám đông tại Shibuya và trải nghiệm công nghệ hiện đại bậc nhất thế giới.',
+    price: 32000000,
+    duration: '5 Ngày 4 Đêm',
+    rating: 4.8,
+    category: 'City',
+    coordinates: { lat: 35.6762, lng: 139.6503 },
+    images: [
+      'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Giao lộ Shibuya', 'Thăm đền Senso-ji', 'Ăn Sushi chợ Tsukiji'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '21',
+    name: 'Hà Giang - Cung Đường Hạnh Phúc',
+    location: 'Hà Giang',
+    country: 'Việt Nam',
+    description: 'Chinh phục Mã Pì Lèng - một trong tứ đại đỉnh đèo và ngắm hoa tam giác mạch rực rỡ.',
+    price: 5500000,
+    duration: '4 Ngày 3 Đêm',
+    rating: 4.9,
+    category: 'Adventure',
+    coordinates: { lat: 22.8233, lng: 104.9833 },
+    images: [
+      'https://images.unsplash.com/photo-1505051508008-923feaf90180?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1581084364121-654eac18cba5?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Chinh phục Mã Pì Lèng', 'Sông Nho Quế', 'Cột cờ Lũng Cú'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '22',
+    name: 'Machu Picchu - Thành Phố Bị Lãng Quên',
+    location: 'Cusco',
+    country: 'Peru',
+    description: 'Khám phá tàn tích hoàng tráng của đế chế Inca nằm chênh vênh trên dãy núi Andes hùng vĩ.',
+    price: 95000000,
+    duration: '8 Ngày 7 Đêm',
+    rating: 5.0,
+    category: 'Cultural',
+    coordinates: { lat: -13.1631, lng: -72.5450 },
+    images: [
+      'https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Leo núi Inca Trail', 'Thăm Thung lũng Linh thiêng', 'Thưởng thức ẩm thực Peru'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '23',
+    name: 'Marrakech - Sắc Màu Ma-rốc',
+    location: 'Marrakech',
+    country: 'Morocco',
+    description: 'Lạc lối trong những khu chợ gia vị thơm lừng và những cung điện lộng lẫy đầy hoa văn.',
+    price: 48000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.7,
+    category: 'Cultural',
+    coordinates: { lat: 31.6295, lng: -7.9811 },
+    images: [
+      'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Quảng trường Jemaa el-Fnaa', 'Vườn Majorelle', 'Cưỡi lạc đà sa mạc'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '24',
+    name: 'Masai Mara - Tiếng Gọi Hoang Dã',
+    location: 'Narok',
+    country: 'Kenya',
+    description: 'Chứng kiến cuộc di cư vĩ đại của động vật hoang dã và giao lưu cùng bộ lạc Masai.',
+    price: 110000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.9,
+    category: 'Nature',
+    coordinates: { lat: -1.5271, lng: 35.1939 },
+    images: [
+      'https://images.unsplash.com/photo-1516422317953-2682972995af?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Săn ảnh Big Five', 'Bay khinh khí cầu', 'Giao lưu bộ lạc Masai'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '25',
+    name: 'Rio - Cuồng Nhiệt Lễ Hội',
+    location: 'Rio de Janeiro',
+    country: 'Brazil',
+    description: 'Tận hưởng sức nóng của vũ điệu Samba và check-in tại tượng Chúa Cứu Thế biểu tượng.',
+    price: 82000000,
+    duration: '7 Ngày 6 Đêm',
+    rating: 4.6,
+    category: 'City',
+    coordinates: { lat: -22.9519, lng: -43.2105 },
+    images: [
+      'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Tượng Chúa Cứu Thế', 'Bãi biển Copacabana', 'Đi cáp treo Sugarloaf'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '26',
+    name: 'New Zealand - Trung Địa Kỳ Ảo',
+    location: 'Queenstown',
+    country: 'New Zealand',
+    description: 'Khám phá bối cảnh phim Chúa Tể Những Chiếc Nhẫn và tham gia các trò chơi mạo hiểm tại thủ đô phiêu lưu Queenstown.',
+    price: 88000000,
+    duration: '8 Ngày 7 Đêm',
+    rating: 4.9,
+    category: 'Adventure',
+    coordinates: { lat: -45.0312, lng: 168.6626 },
+    images: [
+      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Thăm làng Hobbiton', 'Nhảy Bungee', 'Du thuyền vịnh Milford Sound'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '27',
+    name: 'Nam Phi - Mũi Hảo Vọng',
+    location: 'Cape Town',
+    country: 'South Africa',
+    description: 'Chinh phục núi Bàn, gặp gỡ chim cánh cụt tại bãi biển Boulders và thưởng thức rượu vang hảo hạng.',
+    price: 65000000,
+    duration: '7 Ngày 6 Đêm',
+    rating: 4.8,
+    category: 'Nature',
+    coordinates: { lat: -33.9249, lng: 18.4241 },
+    images: [
+      'https://images.unsplash.com/photo-1580137469216-9b137f43ec88?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1549117121-48359e2a243c?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Leo núi Bàn', 'Ngắm chim cánh cụt', 'Thăm Mũi Hảo Vọng'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '28',
+    name: 'Yên Bái - Mùa Vàng Mù Cang Chải',
+    location: 'Mù Cang Chải',
+    country: 'Việt Nam',
+    description: 'Ngắm nhìn những thửa ruộng bậc thang đẹp nhất thế giới vào mùa lúa chín vàng óng ả.',
+    price: 4500000,
+    duration: '3 Ngày 2 Đêm',
+    rating: 4.9,
+    category: 'Nature',
+    coordinates: { lat: 21.8592, lng: 104.1205 },
+    images: [
+      'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Đèo Khau Phạ', 'Ruộng bậc thang La Pán Tẩn', 'Bay khinh khí cầu'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '29',
+    name: 'Hàn Quốc - Mùa Thu Vàng Nami',
+    location: 'Đảo Nami',
+    country: 'Hàn Quốc',
+    description: 'Lãng mạn cùng những hàng cây ngân hạnh rực rỡ và không khí se lạnh quyến rũ của mùa thu xứ Hàn.',
+    price: 18000000,
+    duration: '5 Ngày 4 Đêm',
+    rating: 4.8,
+    category: 'Cultural',
+    coordinates: { lat: 37.7915, lng: 127.5256 },
+    images: [
+      'https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Dạo bước đảo Nami', 'Thanh xuân tại Seoul', 'Trải nghiệm làm Kimchi'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '30',
+    name: 'Thụy Sĩ - Điểm Hẹn Thượng Giới',
+    location: 'Lucerne',
+    country: 'Switzerland',
+    description: 'Thị trấn trung cổ bên hồ Lucerne thơ mộng và những đỉnh núi tuyết phủ quanh năm.',
+    price: 72000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.9,
+    category: 'City',
+    coordinates: { lat: 47.0502, lng: 8.3093 },
+    images: [
+      'https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Cầu gỗ Chapel', 'Núi Pilatus', 'Socola Thụy Sĩ'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '31',
+    name: 'Alaska - Vùng Đất Hoang Dã',
+    location: 'Anchorage',
+    country: 'USA',
+    description: 'Chứng kiến những tảng băng trôi khổng lồ và thế giới động vật hoang dã hùng vĩ vùng cực bắc.',
+    price: 130000000,
+    duration: '9 Ngày 8 Đêm',
+    rating: 4.7,
+    category: 'Adventure',
+    coordinates: { lat: 61.2181, lng: -149.9003 },
+    images: [
+      'https://images.unsplash.com/photo-1520635665115-35439ca3a0bd?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1531366750370-531f9fb5f339?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Ngắm cá voi', 'Quần thể sông băng', 'Công viên Denali'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '32',
+    name: 'Jordan - Kho Báu Petra',
+    location: 'Petra',
+    country: 'Jordan',
+    description: 'Thăm thành phố cổ đại được đục đẽo vào vách đá hồng và trải nghiệm nổi trên Biển Chết.',
+    price: 52000000,
+    duration: '6 Ngày 5 Đêm',
+    rating: 4.9,
+    category: 'Cultural',
+    coordinates: { lat: 30.3285, lng: 35.4444 },
+    images: [
+      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1526315282544-239bb7958643?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Check-in Treasury', 'Tắm Biển Chết', 'Ngủ lều sa mạc Wadi Rum'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '33',
+    name: 'Đà Nẵng - Thành Phố Của Những Cây Cầu',
+    location: 'Đà Nẵng',
+    country: 'Việt Nam',
+    description: 'Thư giãn tại bãi biển Mỹ Khê và chiêm ngưỡng Bà Nà Hills - con đường lên tiên cảnh.',
+    price: 5900000,
+    duration: '4 Ngày 3 Đêm',
+    rating: 4.8,
+    category: 'Beach',
+    coordinates: { lat: 16.0544, lng: 108.2022 },
+    images: [
+      'https://images.unsplash.com/photo-1559592481-74488ea56143?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1598910079075-80f2d87e09dd?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Cầu Vàng Bà Nà Hills', 'Biển Mỹ Khê', 'Phố cổ Hội An'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '34',
+    name: 'Singapore - Đảo Quốc Sư Tử',
+    location: 'Singapore',
+    country: 'Singapore',
+    description: 'Trải nghiệm du lịch xanh và công nghệ hiện đại tại Gardens by the Bay.',
+    price: 12000000,
+    duration: '4 Ngày 3 Đêm',
+    rating: 4.7,
+    category: 'City',
+    coordinates: { lat: 1.3521, lng: 103.8198 },
+    images: [
+      'https://images.unsplash.com/photo-1525596662741-e94ff99163e7?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1506704906740-c440f1804e1d?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Gardens by the Bay', 'Marina Bay Sands', 'Đảo Sentosa'],
+    itinerary: [],
+    feedback: []
+  },
+  {
+    id: '35',
+    name: 'Bali - Thiên Đường Nghỉ Dưỡng',
+    location: 'Ubud',
+    country: 'Indonesia',
+    description: 'Tận hưởng sự yên bình giữa những rừng dừa, ruộng bậc thang và những ngôi đền linh thiêng.',
+    price: 15500000,
+    duration: '5 Ngày 4 Đêm',
+    rating: 4.9,
+    category: 'Beach',
+    coordinates: { lat: -8.5069, lng: 115.2625 },
+    images: [
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1559628233-e02027d1433f?auto=format&fit=crop&q=80&w=1200'
+    ],
+    features: ['Xích đu Bali Swing', 'Đền Tanah Lot', 'Rừng khỉ Ubud'],
+    itinerary: [],
+    feedback: []
   }
 ];

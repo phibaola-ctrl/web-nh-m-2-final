@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { Tour } from '../data/tours';
 import { formatPrice } from '../lib/utils';
+import SafeImage from './SafeImage';
 import confetti from 'canvas-confetti';
 import { useEffect, useState } from 'react';
 import { Sparkles, Trophy, MapPin, ArrowRight } from 'lucide-react';
@@ -80,11 +81,11 @@ export default function GachaReveal({ tour, isOpen, onConfirm }: GachaRevealProp
                 className="w-full max-w-lg bg-[#0a0d14] border border-white/20 rounded-[40px] overflow-hidden shadow-[0_0_150px_rgba(79,70,229,0.15)]"
               >
                 <div className="relative h-64">
-                  <img
+                  <SafeImage
                     src={tour.images[0]}
                     alt={tour.name}
-                    loading="lazy"
                     className="w-full h-full object-cover"
+                    fallbackText={tour.name}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] to-transparent" />
                   

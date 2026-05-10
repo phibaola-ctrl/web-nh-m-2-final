@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, MapPin, Clock, Star, CheckCircle2, ChevronRight, Play, Info, Heart, MessageSquare, Calendar } from 'lucide-react';
 import { Tour } from '../data/tours';
 import { cn, formatPrice } from '../lib/utils';
+import SafeImage from './SafeImage';
 
 interface TourModalProps {
   tour: Tour | null;
@@ -73,11 +74,12 @@ export default function TourModal({ tour, isOpen, onClose, onBook, isWishlisted,
 
             {/* Left Side: Images & Visuals */}
             <div className="w-full md:w-1/2 h-[300px] md:h-auto relative bg-slate-800 overflow-hidden">
-              <img
+              <SafeImage
                 src={tour.images[activeImage]}
                 alt={tour.name}
-                loading="lazy"
+                priority={true}
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-110"
+                fallbackText={tour.name}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               
@@ -92,7 +94,7 @@ export default function TourModal({ tour, isOpen, onClose, onBook, isWishlisted,
                       activeImage === idx ? "border-indigo-500 scale-110" : "border-white/10 opacity-60 hover:opacity-100"
                     )}
                   >
-                    <img src={img} loading="lazy" className="w-full h-full object-cover" alt={`${tour.name} thumbnail ${idx + 1}`} />
+                    <SafeImage src={img} className="w-full h-full object-cover" alt={`${tour.name} thumbnail ${idx + 1}`} fallbackText={`P${idx + 1}`} />
                   </button>
                 ))}
               </div>

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Star, MapPin, Clock, ArrowRight, Heart } from 'lucide-react';
 import { Tour } from '../data/tours';
 import { cn, formatPrice } from '../lib/utils';
+import SafeImage from './SafeImage';
 
 interface TourCardProps {
   key?: string;
@@ -31,11 +32,11 @@ export default function TourCard({ tour, onClick, isWishlisted, onToggleWishlist
       
       {/* Image Container */}
       <div className="relative h-60 overflow-hidden bg-white/5">
-        <img
+        <SafeImage
           src={tour.images[0]}
           alt={tour.name}
-          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+          fallbackText={tour.name}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/40 to-transparent group-hover:via-[#0a0d14]/20 transition-all duration-500" />
         

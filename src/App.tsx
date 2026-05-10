@@ -7,9 +7,11 @@ import TourCard from './components/TourCard';
 import TourModal from './components/TourModal';
 import BlindBag from './components/BlindBag';
 import GachaReveal from './components/GachaReveal';
+import TourMap from './components/TourMap';
 import Footer from './components/Footer';
 import SupportModal from './components/SupportModal';
 import WishlistSidebar from './components/WishlistSidebar';
+import SafeImage from './components/SafeImage';
 import NotificationToast, { ToastType } from './components/NotificationToast';
 import { formatPrice } from './lib/utils';
 
@@ -18,6 +20,7 @@ export default function App() {
   const [search, setSearch] = useState(() => localStorage.getItem('tour_search') || '');
   const [category, setCategory] = useState(() => localStorage.getItem('tour_category') || 'All');
   const [priceRange, setPriceRange] = useState(() => localStorage.getItem('tour_priceRange') || 'All');
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
   const [selectedTour, setSelectedTour] = useState<Tour | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isConfirmBookingOpen, setIsConfirmBookingOpen] = useState(false);
@@ -277,7 +280,31 @@ export default function App() {
           <div className="flex flex-col md:flex-row items-end justify-between gap-4 mb-12">
             <div className="space-y-1 text-left">
               <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Khám phá kho tour</h3>
-              <h2 className="text-3xl font-black text-white tracking-tight uppercase">Danh sách địa điểm</h2>
+              <div className="flex items-center gap-6">
+                <h2 className="text-3xl font-black text-white tracking-tight uppercase">Danh sách địa điểm</h2>
+                <div className="flex bg-white/5 p-1 rounded-xl border border-white/10">
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
+                      viewMode === 'list' 
+                      ? 'bg-white text-black shadow-lg shadow-white/10' 
+                      : 'text-slate-500 hover:text-white'
+                    }`}
+                  >
+                    DANH SÁCH
+                  </button>
+                  <button
+                    onClick={() => setViewMode('map')}
+                    className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
+                      viewMode === 'map' 
+                      ? 'bg-white text-black shadow-lg shadow-white/10' 
+                      : 'text-slate-500 hover:text-white'
+                    }`}
+                  >
+                    BẢN ĐỒ
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -291,29 +318,49 @@ export default function App() {
           />
 
           <div className="mt-12">
-            <AnimatePresence mode="popLayout">
-              {displayedTours.map((tour) => (
+            <AnimatePresence mode="wait">
+              {viewMode === 'list' ? (
                 <motion.div
-                  key={tour.id}
-                  ref={(el) => tourRefs.set(tour.id, el as HTMLDivElement)}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
+                  key="list-view"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
                 >
-                  <TourCard 
-                    tour={tour} 
-                    onClick={handleShowDetail} 
-                    isWishlisted={wishlist.includes(tour.id)}
-                    onToggleWishlist={() => toggleWishlist(tour.id)}
-                  />
+                  {displayedTours.map((tour) => (
+                    <motion.div
+                      key={tour.id}
+                      ref={(el) => tourRefs.set(tour.id, el as HTMLDivElement)}
+                      layout
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <TourCard 
+                        tour={tour} 
+                        onClick={handleShowDetail} 
+                        isWishlisted={wishlist.includes(tour.id)}
+                        onToggleWishlist={() => toggleWishlist(tour.id)}
+                      />
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
+              ) : (
+                <motion.div
+                  key="map-view"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <TourMap tours={filteredTours} onTourClick={handleShowDetail} />
+                </motion.div>
+              )}
             </AnimatePresence>
           </div>
 
-          {visibleCount < filteredTours.length && (
+          {viewMode === 'list' && visibleCount < filteredTours.length && (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -397,11 +444,11 @@ export default function App() {
                     onClick={() => handleShowDetail(tour)}
                     className="aspect-[3/4] rounded-2xl bg-white/5 p-1 border border-white/10 cursor-pointer overflow-hidden shadow-2xl group"
                   >
-                    <img 
+                    <SafeImage 
                       src={tour.images[0]} 
-                      loading="lazy"
                       className="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" 
                       alt={tour.name}
+                      fallbackText={tour.name}
                     />
                   </div>
                 </motion.div>

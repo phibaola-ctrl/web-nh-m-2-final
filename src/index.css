@@ -8,6 +8,13 @@
   --color-primary-bg: #05070a;
   --color-secondary-bg: #0a0d14;
   --color-accent-indigo: #6366f1;
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  --animate-shimmer: shimmer 2s infinite linear;
 }
 
 body {

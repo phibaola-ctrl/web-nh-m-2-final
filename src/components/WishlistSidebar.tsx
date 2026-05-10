@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, Heart, ShoppingBag, ArrowRight, Trash2, Compass } from 'lucide-react';
 import { Tour } from '../data/tours';
 import { formatPrice } from '../lib/utils';
+import SafeImage from './SafeImage';
 
 interface WishlistSidebarProps {
   isOpen: boolean;
@@ -63,11 +64,11 @@ export default function WishlistSidebar({ isOpen, onClose, wishlistedTours, onRe
                   >
                     <div className="flex gap-4">
                       <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 border border-white/10">
-                        <img 
+                        <SafeImage 
                           src={tour.images[0]} 
                           alt={tour.name} 
-                          loading="lazy"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          fallbackText={tour.name}
                         />
                       </div>
                       <div className="flex-1 min-w-0 flex flex-col justify-between">
