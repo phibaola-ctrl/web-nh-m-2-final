@@ -12,10 +12,10 @@ export default function Footer({ onOpenSupport }: FooterProps) {
         <div className="space-y-6 max-w-xs">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
-              <span className="text-white font-bold text-sm">T</span>
+              <span className="text-white font-bold text-sm">B</span>
             </div>
             <span className="text-xl font-bold tracking-tight text-white uppercase">
-              NHÓM <span className="text-indigo-400">2</span>
+              BLIND<span className="text-indigo-400">TRIP</span>
             </span>
           </div>
           <p className="text-slate-500 text-xs font-medium leading-relaxed uppercase tracking-widest opacity-80">
@@ -63,7 +63,7 @@ export default function Footer({ onOpenSupport }: FooterProps) {
 
       <div className="max-w-7xl mx-auto border-t border-white/[0.03] mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-slate-600 text-[10px] font-black uppercase tracking-[0.2em]">
-          © 2026 NHÓM 2. MODERN TRAVEL GACHA.
+          © 2026 BLINDTRIP. MODERN TRAVEL GACHA.
         </p>
         <div className="flex items-center gap-1 text-slate-700 text-[10px] font-black uppercase tracking-widest">
           SYSTEM STATUS: <span className="text-indigo-400/50 italic font-medium">STABLE v2.4.0</span>

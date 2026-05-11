@@ -125,8 +125,8 @@ export default function TourMap({ tours, onTourClick }: TourMapProps) {
       
       {/* Attribution overlay / branding element */}
       <div className="absolute bottom-4 left-4 bg-[#0a0d14]/80 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2 pointer-events-none">
-        <div className="w-4 h-4 bg-indigo-500 rounded flex items-center justify-center text-[10px] font-black text-white">2</div>
-        <span className="text-[9px] font-black text-white uppercase tracking-widest">NHÓM 2 TRAVEL MAP</span>
+        <div className="w-4 h-4 bg-indigo-500 rounded flex items-center justify-center text-[10px] font-black text-white">B</div>
+        <span className="text-[9px] font-black text-white uppercase tracking-widest">BLINDTRIP TRAVEL MAP</span>
       </div>
     </div>
   );
