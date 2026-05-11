@@ -75,7 +75,10 @@ export default function TourModal({ tour, isOpen, onClose, onBook, isWishlisted,
             {/* Left Side: Images & Visuals */}
             <div className="w-full md:w-1/2 h-[300px] md:h-auto relative bg-slate-800 overflow-hidden">
               <SafeImage
-                src={tour.images[activeImage]}
+                src={tour.images[activeImage]?.includes('unsplash.com') 
+                  ? `${tour.images[activeImage].split('?')[0]}?auto=format&fit=crop&q=80&w=1200`
+                  : tour.images[activeImage]
+                }
                 alt={tour.name}
                 priority={true}
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-110"
@@ -85,18 +88,24 @@ export default function TourModal({ tour, isOpen, onClose, onBook, isWishlisted,
               
               {/* Image Navigation */}
               <div className="absolute bottom-8 left-8 right-8 flex gap-3">
-                {tour.images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveImage(idx)}
-                    className={cn(
-                      "w-14 h-14 rounded-xl overflow-hidden border-2 transition-all shadow-xl",
-                      activeImage === idx ? "border-indigo-500 scale-110" : "border-white/10 opacity-60 hover:opacity-100"
-                    )}
-                  >
-                    <SafeImage src={img} className="w-full h-full object-cover" alt={`${tour.name} thumbnail ${idx + 1}`} fallbackText={`P${idx + 1}`} />
-                  </button>
-                ))}
+                {tour.images.map((img, idx) => {
+                  const thumbImg = img?.includes('unsplash.com')
+                    ? `${img.split('?')[0]}?auto=format&fit=crop&q=80&w=200`
+                    : img;
+                    
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImage(idx)}
+                      className={cn(
+                        "w-14 h-14 rounded-xl overflow-hidden border-2 transition-all shadow-xl",
+                        activeImage === idx ? "border-indigo-500 scale-110" : "border-white/10 opacity-60 hover:opacity-100"
+                      )}
+                    >
+                      <SafeImage src={thumbImg} className="w-full h-full object-cover" alt={`${tour.name} thumbnail ${idx + 1}`} fallbackText={`P${idx + 1}`} />
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Status Badge */}

@@ -13,6 +13,7 @@ import SupportModal from './components/SupportModal';
 import WishlistSidebar from './components/WishlistSidebar';
 import SafeImage from './components/SafeImage';
 import NotificationToast, { ToastType } from './components/NotificationToast';
+import BookingChatbot from './components/BookingChatbot';
 import { formatPrice } from './lib/utils';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
   const [selectedTour, setSelectedTour] = useState<Tour | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isConfirmBookingOpen, setIsConfirmBookingOpen] = useState(false);
+  const [isBookingChatOpen, setIsBookingChatOpen] = useState(false);
   const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const [pendingTour, setPendingTour] = useState<Tour | null>(null);
@@ -197,7 +199,7 @@ export default function App() {
   const handleBooking = (tour: Tour) => {
     setPendingTour(tour);
     setIsModalOpen(false);
-    setIsConfirmBookingOpen(true);
+    setIsBookingChatOpen(true);
   };
 
   const handleConfirmBooking = () => {
@@ -292,16 +294,6 @@ export default function App() {
                     }`}
                   >
                     DANH SÁCH
-                  </button>
-                  <button
-                    onClick={() => setViewMode('map')}
-                    className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
-                      viewMode === 'map' 
-                      ? 'bg-white text-black shadow-lg shadow-white/10' 
-                      : 'text-slate-500 hover:text-white'
-                    }`}
-                  >
-                    BẢN ĐỒ
                   </button>
                 </div>
               </div>
@@ -427,10 +419,6 @@ export default function App() {
               <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-lg">
                 Khám phá những vùng đất đang làm mưa làm gió trong cộng đồng những người đam mê xê dịch. Những lựa chọn hàng đầu được yêu thích nhất.
               </p>
-              <button className="bg-white text-black font-black px-10 py-4 rounded-xl flex items-center gap-3 hover:bg-slate-200 transition-all uppercase tracking-tighter text-sm shadow-xl shadow-white/5">
-                XEM TẤT CẢ
-                <Compass className="w-5 h-5 text-indigo-600" />
-              </button>
             </div>
             
             <div className="flex-1 grid grid-cols-2 gap-4">
@@ -503,6 +491,19 @@ export default function App() {
         onBook={handleBooking}
         isWishlisted={selectedTour ? wishlist.includes(selectedTour.id) : false}
         onToggleWishlist={() => selectedTour && toggleWishlist(selectedTour.id)}
+      />
+
+      <BookingChatbot
+        tour={pendingTour!}
+        isOpen={isBookingChatOpen && !!pendingTour}
+        onClose={() => {
+          setIsBookingChatOpen(false);
+          setIsModalOpen(true);
+        }}
+        onConfirmBooking={() => {
+          setIsBookingChatOpen(false);
+          setIsConfirmBookingOpen(true);
+        }}
       />
 
       <GachaReveal
