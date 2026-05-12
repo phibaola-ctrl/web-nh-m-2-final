@@ -80,7 +80,7 @@ export default function SupportModal({ isOpen, onClose }: SupportModalProps) {
                   </div>
                   <div>
                     <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Email Liên Hệ</div>
-                    <div className="text-white font-bold text-sm tracking-tight italic">phibaola@gmail.com</div>
+                    <div className="text-white font-bold text-sm tracking-tight italic">blindtriptour@gmail.com</div>
                   </div>
                 </div>
 
@@ -90,7 +90,7 @@ export default function SupportModal({ isOpen, onClose }: SupportModalProps) {
                   </div>
                   <div>
                     <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Chat Trực Tiếp</div>
-                    <div className="text-white font-bold text-sm tracking-tight italic">Zalo: @tourtuimu</div>
+                    <div className="text-white font-bold text-sm tracking-tight italic">Zalo: @blindtriptour</div>
                   </div>
                 </div>
               </div>
