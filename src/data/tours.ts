@@ -275,24 +275,6 @@ export const TOURS: Tour[] = [
     feedback: []
   },
   {
-    id: '15',
-    name: 'Seoul - Sắc Màu Hàn Quốc',
-    location: 'Seoul',
-    country: 'Hàn Quốc',
-    description: 'Trải nghiệm không gian k-pop sôi động và những cung điện cổ kính nghìn năm.',
-    price: 26800000,
-    duration: '5 Ngày 4 Đêm',
-    rating: 4.9,
-    category: 'Cultural',
-    coordinates: { lat: 37.5665, lng: 126.9780 },
-    images: [
-      'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=1200'
-    ],
-    features: ['Cung điện Gyeongbokgung', 'Tháp Namsan', 'Mặc Hanbok'],
-    itinerary: [],
-    feedback: []
-  },
-  {
     id: '16',
     name: 'Iceland - Vũ Điệu Ánh Sáng',
     location: 'Reykjavik',
